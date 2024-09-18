@@ -1,0 +1,372 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Space+Grotesk:wght@300..700&display=swap');
+
+/* 
+-----------------------------
+-----------------------------
+------HH-------------HH-----
+------HH-------------HH------
+------HH-------------HH------
+-----------------------------
+---HH-------------------HH---
+----HHH---------------HHH----
+------HHHHHHHHHHHHHHHHH------
+-----------------------------
+-----------------------------
+
+
+CSS TABLE OF CONTENTS
+
+# GLOBAL STYLES
+    # GLOBAL VARIABLES
+    # GLOBAL COLORS
+    # GLOBAL TYPOGRAPHY
+    # GLOOBAL MEDIA
+
+#LAYOUT
+    # MEDIA QUERIES / BREAKPOINTS
+    # CONTAINER
+    # GRID
+
+-----------------------------
+-----------------------------
+------HH-------------HH-----
+------HH-------------HH------
+------HH-------------HH------
+-----------------------------
+------HHHHHHHHHHHHHHHHH------
+----HHH---------------HHH----
+---HH-------------------HH---
+-----------------------------
+-----------------------------
+*/
+
+/* GLOBAL VARIABLES */
+
+:root {
+  --color-body-background: rgb(243, 239, 208);
+  --color-text-body: rgb(0 0 0 / .8);
+  --color-text-headings: rgb(0 0 0 / .8);
+  --color-links: rgb(201, 137, 0);
+  --color-links-hover: rgb(173, 173, 173);
+
+  --font-body: Helvetica, Arial, sans-serif;
+  --font-headings: Georgia, serif;
+
+  --container-width: 1500px;
+
+}
+
+/* GLOBAL RESET */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+/* GLOBAL COLORS */
+
+body {
+  background-color: var(--color-body-background);
+  color: var(--color-text-body);
+}
+
+h1,
+h2,
+h3 {
+  color: var(--color-text-headings);
+}
+
+a {
+  color: var(--color-links);
+
+  &:hover {
+    color: var(--color-links-hover);
+  }
+}
+
+/* GLOBAL TYPOGRAPHY */
+
+body {
+  font-family: var(--font-body);
+
+  line-height: 1.4;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-headings);
+
+}
+
+h1 {
+  font-size: 3em;
+  line-height: 1.1;
+  text-wrap: pretty;
+  margin-top: 0;
+}
+
+h2 {
+  font-size: 2em;
+  line-height: 1.2;
+  text-wrap: pretty;
+}
+
+h3 {
+  font-size: 1.5em;
+  line-height: 1.3;
+  text-wrap: pretty;
+}
+
+h4 {
+  font-size: 1em;
+  line-height: 1.4;
+  text-wrap: pretty;
+  color: var(--color-links);
+  margin-top: 0;
+}
+
+p {
+  max-width: 65ch;
+  text-wrap: pretty;
+}
+
+/* GLOOBAL MEDIA */
+
+img {
+  height: 100%;
+  width: 100%;
+  border-radius: 1em;
+
+  /* DISABLE HIGHLIGHT */
+
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Old versions of Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+}
+
+img.darken {
+  -webkit-filter: brightness(100%);
+  transition: all 1s ease;
+}
+
+img.darken:hover {
+  -webkit-filter: brightness(80%);
+  transition: all .6s ease;
+}
+
+img.outline {
+  border: solid rgba(255, 255, 255, 0) 0em;
+  transition: all 1s ease;
+}
+
+img.outline:hover {
+  border: solid rgba(255, 255, 255, 0) .8em;
+  transition: all .6s ease;
+}
+
+.fill {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.fill img {
+  flex-shrink: 0;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+}
+
+.switchable {
+  cursor: pointer;
+}
+
+/* LAYOUT */
+
+/* SMALL SCREEN 768px */
+
+body {
+  font-size: 87.5%;
+}
+
+/* MEDIUM SCREEN 1200px */
+
+@media (min-width: 768px) {
+  body {
+    font-size: 100%;
+  }
+}
+
+
+/* LARGE SCREEN +1200px */
+
+@media (min-width: 1200px) {
+  body {
+    font-size: 112.5%;
+  }
+}
+
+.container {
+  max-width: var(--container-width);
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1em;
+  padding: 0 2em 0 2em;
+
+}
+
+/* GRID */
+
+.row {
+  --gridgap: 1em;
+}
+
+.row>* {
+  margin-bottom: var(--gridgap);
+}
+
+@media (min-width: 768px) {
+  .row {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: var(--gridgap)
+  }
+
+  .one-half {
+    grid-column: span 6 / span 6;
+  }
+
+  .one-third {
+    grid-column: span 4 / span 4;
+  }
+
+  .two-thirds {
+    grid-column: span 8 / span 8;
+  }
+
+  .one-fourth {
+    grid-column: span 3 / span 3;
+  }
+
+  .three-fourths {
+    grid-column: span 9 / span 9;
+  }
+}
+
+.demo>* {
+  background-color: rgba(255, 255, 255, .8);
+  padding: 0;
+  text-align: center;
+}
+
+/* POP-UP WINDOW */
+
+.popup-link {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.popup-link a {
+  background: #333;
+  color: #fff;
+  padding: 10px 30px;
+  border-radius: 5px;
+  font-size: 17px;
+  cursor: pointer;
+  margin: 20px;
+  text-decoration: none;
+}
+
+.popup-container {
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+  transform: scale(1.3);
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.40);
+  display: flex;
+  align-content: center;
+  padding-left: 2em;
+  padding-right: 2em;
+}
+
+
+.popup-content {
+  max-width: var(--container-width);
+  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: var(--color-body-background);
+  padding: 1em;
+  width: 1200px;
+  max-height: fit-content;
+  border-radius: 1em;
+}
+
+.popup-content a.close {
+  color: rgba(0, 0, 0, 0.40);
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  background: none;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  line-height: 10px;
+  padding-left: 10px;
+}
+
+.popup-content a.close:hover {
+  color: #333;
+}
+
+.popup-content span:hover,
+.popup-content span:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.popup-container:target {
+  visibility: visible;
+  opacity: 1;
+  transform: scale(1);
+}
+
+.popup-container h3 {
+  margin: 0;
+}
+
+.popup-content .row>* {
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .popup-content .row>* {
+    margin: 1em;
+  }
+}
+
+/* FOOTER */
