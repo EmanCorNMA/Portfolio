@@ -45,16 +45,23 @@ CSS TABLE OF CONTENTS
 /* GLOBAL VARIABLES */
 
 :root {
-  --color-body-background: rgb(243, 239, 208);
+  --color-body-background: rgb(197, 182, 182);
+
+  /*--color-body-background: rgb(243, 239, 208);*/
+
   --color-text-body: rgb(0 0 0 / .8);
   --color-text-headings: rgb(0 0 0 / .8);
-  --color-links: rgb(201, 137, 0);
-  --color-links-hover: rgb(173, 173, 173);
+  --color-text-sub-headings: rgb(28, 119, 99);
+  --color-links: rgb(28, 119, 99);
+  --color-links-hover: rgb(255, 255, 255, .8);
 
   --font-body: Helvetica, Arial, sans-serif;
   --font-headings: Georgia, serif;
 
   --container-width: 1500px;
+
+  --header-container-width: 1500px;
+  --header-color: rgb(197, 182, 182, .8);
 
 }
 
@@ -83,6 +90,12 @@ h3 {
 
 a {
   color: var(--color-links);
+  text-decoration: none;
+  color: var(--color-text-sub-headings);
+  font-family: var(--font-headings);
+  font-size: 1em;
+  line-height: 1.4;
+  text-wrap: pretty;
 
   &:hover {
     color: var(--color-links-hover);
@@ -93,7 +106,6 @@ a {
 
 body {
   font-family: var(--font-body);
-
   line-height: 1.4;
 }
 
@@ -128,7 +140,7 @@ h4 {
   font-size: 1em;
   line-height: 1.4;
   text-wrap: pretty;
-  color: var(--color-links);
+  color: var(--color-text-sub-headings);
   margin-top: 0;
 }
 
@@ -136,6 +148,28 @@ p {
   max-width: 65ch;
   text-wrap: pretty;
 }
+
+/* SITE HEADER */
+
+.header {
+  padding: 1em 0 1em 0;
+  backdrop-filter: blur(30px);
+  background-color: var(--header-color);
+  position: sticky;
+  margin: 0;
+  top: 0;
+}
+
+.header-container {
+  max-width: var(--header-container-width);
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2em 0 2em;
+}
+
+
 
 /* GLOOBAL MEDIA */
 
@@ -268,6 +302,14 @@ body {
 
   .three-fourths {
     grid-column: span 9 / span 9;
+  }
+
+  .four-column {
+    grid-column: span 4 / span 4;
+  }
+
+  .push-3 {
+    grid-column-start: 3;
   }
 }
 
