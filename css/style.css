@@ -470,8 +470,13 @@ body {
   .popup-row {
     display: flex;
   }
+}
 
+/* NO SCROLLING WHEN POPUP OPENS */
 
+.remove-scrolling {
+  height: 100%;
+  overflow: hidden;
 }
 
 /* FOOTER */

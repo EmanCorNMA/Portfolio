@@ -2,6 +2,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     //JAVASCRIPT FUNCTIONS GO HERE
 
+    //IMAGE SWAP
+
     function refreshSwitch(s) {
         let currentSwitch = s.dataset.switchCurrent;
 
@@ -38,3 +40,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
     //TEST IF JS IS LINKED AND ACTIVE console.log('JS IS READY');
 })
+
+//BODY NO SCROLLING WHEN POPUP OPENS
+
+function disableScroll() {
+    document.body.classList.add("remove-scrolling");
+}
+
+function enableScroll() {
+    document.body.classList.remove("remove-scrolling");
+}
