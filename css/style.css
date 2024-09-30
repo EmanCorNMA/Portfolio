@@ -50,6 +50,7 @@ CSS TABLE OF CONTENTS
   --color-text-sub-headings: rgb(28, 119, 99);
   --color-links: rgb(28, 119, 99);
   --color-links-hover: rgb(255, 255, 255, .8);
+  --color-links-hover-black: rgb(0 0 0 / .8);
 
   --font-body: Helvetica, Arial, sans-serif;
   --font-headings: Helvetica, Arial, sans-serif;
@@ -181,8 +182,13 @@ p {
 
 /* BUTTON */
 
+button {
+  border: 0;
+  cursor: pointer;
+}
+
 .button {
-  padding: .1em .5em .1em .5em;
+  padding: .5em 1em .5em 1em;
   background-color: var(--color-links);
   color: var(--color-links-hover);
   border-radius: 5px;
@@ -452,12 +458,18 @@ body {
 }
 
 .popup-img {
-  margin: 1em 1em 1em 1em;
+  margin: 1em;
   display: flex;
 }
 
 .popup-text {
-  margin: 1em 1em 1em 1em;
+  margin: 1em;
+}
+
+@media (max-width: 768px) {
+  .popup-text {
+    margin: 1.6em;
+  }
 }
 
 @media (min-width: 768px) {
@@ -479,6 +491,12 @@ body {
   overflow: hidden;
 }
 
+/* ABOUT */
+.about {
+  margin-top: 8em;
+}
+
+
 /* FOOTER */
 
 footer {
@@ -492,7 +510,7 @@ footer {
 
 .footer-content {
   margin-top: 1em;
-  margin-bottom: 4em;
+  margin-bottom: 6em;
 }
 
 .footer-icons {
@@ -504,4 +522,16 @@ footer {
 
 footer h4 {
   margin-top: .3em;
+}
+
+footer a {
+  font-size: 1em;
+  line-height: 1.4;
+  margin-top: .15em;
+  font-weight: 700;
+}
+
+
+footer a:hover {
+  color: var(--color-links-hover-black);
 }

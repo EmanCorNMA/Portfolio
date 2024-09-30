@@ -22,7 +22,8 @@
       <div class="site-logo"><a>
           Emmanuel Correa
         </a></div>
-      <div class="site-nav"><a href="#" class="button">
+      <div class="site-nav">
+        <a href="#" class="button">
           Gallery
         </a>
         <a href="about/index.html" class="button">
@@ -90,11 +91,11 @@
       <div class="row">
         <div class="four-column push-3">
           <img src="img/icon_email.png" alt="Gmail icon" class="footer-icons">
-          <h4>Correa23@hawaii.edu</h4>
+          <a href="mailto:correa23@hawaii.edu" target="_blank">correa23@hawaii.edu</a>
         </div>
         <div class="four-column">
           <img src="img/icon_phone.png" alt="phone icon" class="footer-icons">
-          <h4>(808) 892-8004</h4>
+          <a href="tel:+8088928004" target="_blank">(808) 892-8004</a>
         </div>
       </div>
     </div>
@@ -106,8 +107,8 @@
   <div class="popup-content">
     <a href="#/" class="close" onclick="enableScroll()">&times;</a>
     <div class="popup-row">
-      <a class="popup-img" href="https://emancornma.github.io/studentsite/art128/aqua_discuss/Draft-final/">
-        <img class="darken outline" src="img/aquadiscuss-square.png" alt="Aqua Discuss Website"
+      <a class="popup-img">
+        <img class="outline-no-hover" src="img/aquadiscuss-square.png" alt="Aqua Discuss Website"
           style="max-width: 600px;">
       </a>
       <div class="popup-text">
@@ -121,6 +122,8 @@
           left and disperse throught the site, similar to the flow of water. Clicking the icons will scroll the page
           down to its
           coresponding section.</p>
+        <a href="https://emancornma.github.io/studentsite/art128/aqua_discuss/Draft-final/" class="button">Visit
+          Site</a>
       </div>
     </div>
   </div>
@@ -131,9 +134,8 @@
     <a href="#/" class="close" onclick="enableScroll()">&times;</a>
     <div class="popup-row">
       <a class="popup-img">
-        <img class="switchable outline" alt="Monaco Tourism Logo" src="img/Monaco-Tourism-Logo-02.png"
-          data-switch-src-0="img/Monaco-Tourism-Logo-02.png" data-switch-src-1="img/Monaco-Tourism-Logo-01.png"
-          data-switch-cases="2" data-switch-current="0" style="max-width: 600px;">
+        <img id="montecarloImg" class="outline-no-hover" alt="Montecarlo Monaco Tourism Logo"
+          src="img/Monaco-Tourism-Logo-02.png" style="max-width: 600px;">
       </a>
       <div class="popup-text">
         <h1>Monte Carlo</h1>
@@ -142,6 +144,7 @@
           gambling economy operated within the Casino de Monte-Carlo. To create the tourism logo I combined a poker chip
           with a beach
           umbrella, the two are visually seen throught Monte Carlo and reflect its wealthy culture and lifestyle.</p>
+        <button id="montecarloButton" class="button">Toggle Image</button>
       </div>
     </div>
   </div>
@@ -152,9 +155,8 @@
     <a href="#/" class="close" onclick="enableScroll()">&times;</a>
     <div class="popup-row">
       <a class="popup-img">
-        <img class="switchable outline" alt="Surf N Sea Logo" src="img/Surf-n-Sea-02.png"
-          data-switch-src-0="img/Surf-n-Sea-02.png" data-switch-src-1="img/Surf-n-Sea-01.png" data-switch-cases="2"
-          data-switch-current="0" style="max-width: 600px;">
+        <img id="surfnseaImg" class="outline-no-hover" alt="Surf N Sea Logo" src="img/Surf-n-Sea-02.png"
+          style="max-width: 600px;">
       </a>
       <div class="popup-text">
         <h1>Surf N Sea</h1>
@@ -164,6 +166,7 @@
           the beach. To do that, I illustrated a sun
           tanned duck fitted out with flippers and a snorkel, conveying that the proper beach attire and equipment will
           enhance any beach goers experience.</p>
+        <button id="surfnseaButton" class="button">Toggle Image</button>
       </div>
     </div>
   </div>
@@ -194,9 +197,8 @@
     <a href="#/" class="close" onclick="enableScroll()">&times;</a>
     <div class="popup-row">
       <a class="popup-img">
-        <img class="switchable outline" alt="Olympic Pictograms" src="img/Olympic-Picto-01.png"
-          data-switch-src-0="img/Olympic-Picto-01.png" data-switch-src-1="img/Olympic-Picto-02.png"
-          data-switch-cases="2" data-switch-current="0" style="max-width: 600px;">
+        <img id="olympicpictogramsImg" class="outline-no-hover" alt="Olympic Pictograms" src="img/Olympic-Picto-01.png"
+          style="max-width: 600px;">
       </a>
       <div class="popup-text">
         <h1>Olympic Pictograms</h1>
@@ -204,7 +206,8 @@
         <p>When illustrating these four pictograms I aimed to give a strong sense of movement. To achieved this, I added
           thickness to the lines that I thought would have weight carried behind them, adding the illusion of momentum
           to the figures. The visual works perfectly with the swimmer, as the water flows off and around the figures
-          head mid-stroke.</p>
+          head.</p>
+        <button id="olympicpictogramsButton" class="button">Toggle Image</button>
       </div>
     </div>
   </div>
