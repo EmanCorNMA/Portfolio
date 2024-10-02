@@ -43,6 +43,10 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 })
 
+// IMAGE TRANSITION??
+
+
+
 //TEST IF JS IS LINKED AND ACTIVE console.log('JS IS READY');
 
 

@@ -21,6 +21,7 @@ CSS TABLE OF CONTENTS
     # GLOOBAL MEDIA
 
 #LAYOUT
+    # SITE HEADER
     # MEDIA QUERIES / BREAKPOINTS
     # CONTAINER
     # GRID
@@ -47,7 +48,7 @@ CSS TABLE OF CONTENTS
 
   --color-text-body: rgb(0 0 0 / .8);
   --color-text-headings: rgb(0 0 0 / .8);
-  --color-text-sub-headings: rgb(28, 119, 99);
+  --color-text-sub-headings: rgb(255, 255, 255, .8);
   --color-links: rgb(28, 119, 99);
   --color-links-hover: rgb(255, 255, 255, .8);
   --color-links-hover-black: rgb(0 0 0 / .8);
@@ -146,40 +147,6 @@ p {
   text-wrap: pretty;
 }
 
-/* SITE HEADER */
-
-.header {
-  padding: 1em 0 1em 0;
-  backdrop-filter: blur(30px);
-  background-color: var(--header-color);
-  position: sticky;
-  margin: 0;
-  top: 0;
-}
-
-.header-container {
-  max-width: var(--header-container-width);
-  margin-left: auto;
-  margin-right: auto;
-  display: flex;
-  justify-content: space-between;
-  padding: 0 2.55em 0 2.55em;
-}
-
-.site-logo a {
-  pointer-events: none;
-  font-family: var(--font-headings);
-  color: var(--color-text-body);
-  font-size: 1.2em;
-  line-height: 1.4;
-  text-wrap: pretty;
-  ;
-}
-
-.site-nav .button {
-  margin-left: 1em;
-}
-
 /* BUTTON */
 
 button {
@@ -196,7 +163,11 @@ button {
 
 .button:hover {
   background-color: var(--color-text-body);
+  transition: all .6s ease;
 }
+
+/* IMAGE TRANSITION?? */
+
 
 /* GLOOBAL MEDIA */
 
@@ -258,6 +229,49 @@ img.outline:hover {
 }
 
 /* LAYOUT */
+
+/* SEPERATOR */
+
+.seperator {
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.2);
+  margin: 0 0 2em 0;
+}
+
+/* SITE HEADER */
+
+.header {
+  padding: 1em 0 1em 0;
+  backdrop-filter: blur(30px);
+  background-color: var(--header-color);
+  position: sticky;
+  margin: 0;
+  top: 0;
+}
+
+.header-container {
+  max-width: var(--header-container-width);
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2.55em 0 2.55em;
+}
+
+.site-logo a {
+  pointer-events: none;
+  font-family: var(--font-headings);
+  color: var(--color-text-body);
+  font-size: 1.2em;
+  line-height: 1.4;
+  font-weight: 700;
+  text-wrap: pretty;
+  ;
+}
+
+.site-nav .button {
+  margin-left: 1em;
+}
 
 /* SMALL SCREEN 768px */
 
@@ -372,7 +386,8 @@ body {
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.40);
+  background-color: rgba(0, 80, 63, 0.4);
+  backdrop-filter: blur(30px);
   display: flex;
   align-content: center;
   padding-left: 2em;
@@ -519,6 +534,7 @@ footer a {
   line-height: 1.4;
   margin-top: .15em;
   font-weight: 700;
+  color: var(--color-links)
 }
 
 
